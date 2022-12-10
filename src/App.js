@@ -20,7 +20,7 @@ function App() {
           </button>
         </div>
       </div>
-      <div className=""></div>
+      <div className="" id="watch-canvas-container"></div>
     </div>
   );
 }
