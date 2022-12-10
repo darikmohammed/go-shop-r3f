@@ -1,4 +1,6 @@
 import React from 'react';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function Nav() {
   return (
@@ -17,9 +19,15 @@ function Nav() {
       </div>
       <div className="flex items-center">
         <ul className="flex items-center gap-4">
-          <li>Search</li>
-          <li>Cart</li>
-          <li>Get Started</li>
+          <li>
+            <SearchIcon />
+          </li>
+          <li>
+            <ShoppingCartIcon />
+          </li>
+          <li className=" bg-sky-500 text-white rounded px-4 py-2">
+            Get Started
+          </li>
         </ul>
       </div>
     </div>
