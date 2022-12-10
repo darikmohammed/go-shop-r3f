@@ -1,3 +1,6 @@
+import { Canvas } from '@react-three/fiber';
+
+
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
@@ -20,7 +23,14 @@ function App() {
           </button>
         </div>
       </div>
-      <div className="" id="watch-canvas-container"></div>
+      <div className="" id="watch-canvas-container">
+        <Canvas>
+          <mesh>
+            <boxGeometry />
+            <meshBasicMaterial color={'#ff0000'} />
+          </mesh>
+        </Canvas>
+      </div>
     </div>
   );
 }
