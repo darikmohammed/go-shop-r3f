@@ -20,7 +20,7 @@ function App() {
           </button>
         </div>
       </div>
-      <div className="flex-1"></div>
+      <div className=""></div>
     </div>
   );
 }
