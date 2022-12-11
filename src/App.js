@@ -1,8 +1,9 @@
 import { Canvas } from '@react-three/fiber';
-
+import { OrbitControls } from '@react-three/drei';
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import Watch from './Components/Watch';
 
 function App() {
   return (
@@ -25,10 +26,10 @@ function App() {
       </div>
       <div className="" id="watch-canvas-container">
         <Canvas>
-          <mesh>
-            <boxGeometry />
-            <meshBasicMaterial color={'#ff0000'} />
-          </mesh>
+          <OrbitControls />
+          <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
+          <ambientLight intensity={1} />
+          <Watch />
         </Canvas>
       </div>
     </div>
