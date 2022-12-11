@@ -1,5 +1,9 @@
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, ContactShadows, Environment } from '@react-three/drei';
+import {
+  ContactShadows,
+  Environment,
+  PresentationControls,
+} from '@react-three/drei';
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
@@ -26,10 +30,20 @@ function App() {
       </div>
       <div className="" id="watch-canvas-container">
         <Canvas>
-          <OrbitControls />
-          <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
-          <ambientLight intensity={1} />
-          <Watch scale={70} rotation-x={Math.PI / 7} />
+          {/* <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
+          <ambientLight intensity={1} /> */}
+
+          <PresentationControls
+            global
+            config={{ mass: 2, tension: 500 }}
+            snap={{ mass: 4, tension: 1500 }}
+            rotation={[0, 0.3, 0]}
+            polar={[-Math.PI / 3, Math.PI / 3]}
+            azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+          >
+            <Watch scale={60} rotation-x={Math.PI / 7} />
+          </PresentationControls>
+
           <ContactShadows
             position={[0, -1.4, 0]}
             opacity={0.75}

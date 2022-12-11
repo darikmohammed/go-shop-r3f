@@ -12,7 +12,11 @@ function Watch(props) {
     ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10;
   });
 
-  return <primitive object={model.scene} ref={ref} {...props} />;
+  return (
+    <>
+      <primitive object={model.scene} ref={ref} {...props} />;
+    </>
+  );
 }
 
 export default Watch;

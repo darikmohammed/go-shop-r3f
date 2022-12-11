@@ -7,7 +7,7 @@ import Nav from './Nav';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className="px-16">
+    <div className="px-32">
       <Nav />
       <App />
     </div>
