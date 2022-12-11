@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, ContactShadows, Environment } from '@react-three/drei';
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
@@ -29,7 +29,15 @@ function App() {
           <OrbitControls />
           <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
           <ambientLight intensity={1} />
-          <Watch />
+          <Watch scale={70} rotation-x={Math.PI / 7} />
+          <ContactShadows
+            position={[0, -1.4, 0]}
+            opacity={0.75}
+            scale={10}
+            blur={2.5}
+            far={4}
+          />
+          <Environment preset="city" />
         </Canvas>
       </div>
     </div>
