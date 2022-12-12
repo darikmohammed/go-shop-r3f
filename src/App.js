@@ -3,6 +3,7 @@ import {
   ContactShadows,
   Environment,
   PresentationControls,
+  Html,
 } from '@react-three/drei';
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -43,7 +44,12 @@ function App() {
           >
             <Watch scale={60} rotation-x={Math.PI / 7} />
           </PresentationControls>
-
+          <Html position-x={3} position-y={3} rotation-x={Math.PI / 9}>
+            <div className="px-2 py-4 flex flex-col bg-white text-black rounded drop-shadow-lg w-44">
+              <h1 className=" text-lg font-bold">Get upto 30% discount</h1>
+              <p>You can ge up to 30 percent discount from here</p>
+            </div>
+          </Html>
           <ContactShadows
             position={[0, -1.4, 0]}
             opacity={0.75}
