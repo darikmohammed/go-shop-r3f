@@ -43,13 +43,19 @@ function App() {
             azimuth={[-Math.PI / 1.4, Math.PI / 2]}
           >
             <Watch scale={60} rotation-x={Math.PI / 7} />
+            <Html
+              position-x={3}
+              position-y={1}
+              position-z={2}
+              rotation-x={Math.PI / 9}
+              transform
+              occlude
+            >
+              <div className="px-2 flex flex-col bg-white text-black rounded drop-shadow-lg w-36">
+                <h1 className=" text-lg font-bold">30% discount</h1>
+              </div>
+            </Html>
           </PresentationControls>
-          <Html position-x={3} position-y={3} rotation-x={Math.PI / 9}>
-            <div className="px-2 py-4 flex flex-col bg-white text-black rounded drop-shadow-lg w-44">
-              <h1 className=" text-lg font-bold">Get upto 30% discount</h1>
-              <p>You can ge up to 30 percent discount from here</p>
-            </div>
-          </Html>
           <ContactShadows
             position={[0, -1.4, 0]}
             opacity={0.75}
